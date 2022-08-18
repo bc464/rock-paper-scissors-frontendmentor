@@ -18,13 +18,13 @@
     <img src="images/logo.svg" align="logo" class="logo">
     <div class="game-score">
       <h4 class="game-score--heading">Score</h4>
-      <h2 class="game-score--total">13</h2>
+      <h2 class="playerScore game-score--total">0</h2>
     </div>
   </section>
 
 <!-- MAIN GAME AREA -->
 <!-- GAME ICONS FRONT PAGE -->
-  <section class="game-play-page">
+  <section class="game-play--page">
     
     <div class="game-icons">
       <div id="paper" class="game-icon--box">
@@ -49,19 +49,23 @@
     <div class="player">
       <h3>YOU PICKED</h3>
       <div class="player-choice">
-         <button><img src="images/icon-paper.svg" alt="paper-icon" class="game-icon game-icon--paper playing-icons paper-icon" align="icon-paper"></button>
+        <p class="choice-box"><span class="player-choice"></span></p>
+         <!-- <button><img src="images/icon-paper.svg" alt="paper-icon" class="game-icon game-icon--paper playing-icons paper-icon" align="icon-paper"></button> -->
       </div>
      </div>
      <div class="result">
-      <div class="result-text"><h1>YOU WIN!</h1>
+      <div class="result-text">
       </div>
       <button class="btn-again">PLAY AGAIN</button>
     </div>
     <div class="house-player">
       <h3>THE HOUSE PICKED</h3>
-      <button><img src="images/icon-scissors.svg" alt="scissors-icon" class="game-icon game-icon--scissors playing-icons scissors-icon" align="icon-scissors"></button>
+      <p class="choice-box">
+        <span class="house-choice"></span>
+      </p>
+      <!-- <button><img src="images/icon-scissors.svg" alt="scissors-icon" class="game-icon game-icon--scissors playing-icons scissors-icon" align="icon-scissors"></button>
       <div class="house-choice">
-      </div>
+      </div> -->
      </div>
    </div>
    </section>
