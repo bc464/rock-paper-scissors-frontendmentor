@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+  <section class="game-heading">
+    <img src="images/logo.svg" align="logo" class="logo">
+    <div class="game-score">
+      <h4 class="game-score--heading">Score</h4>
+      <h2 class="game-score--total">13</h2>
+    </div>
+  </section>
+
+<!-- MAIN GAME AREA -->
+<!-- GAME ICONS FRONT PAGE -->
+  <section class="game-play-page">
+    
+    <div class="game-icons">
+      <div id="paper" class="game-icon--box">
+        
+      <button class="game-icon game-icon--paper"><img src="images/icon-paper.svg" alt="paper-icon" class="playing-icons paper-icon" align="icon-paper"></button>
+    
+    </div>
+   
+   <div id="scissors" class="game-icon--box">
+      <button class="game-icon game-icon--scissors"><img src="images/icon-scissors.svg" alt="scissors-icon" class="playing-icons scissors-icon" align="icon-scissors"></button>
+    </div>
+     <div id="rock" class="game-icon--box">
+     <button class="game-icon game-icon--rock"><img src="images/icon-rock.svg" alt="rock-icon" class="playing-icons rock-icon" align="icon-rock"></button>
+   </div>
+    </div>
+    </section> 
+   
+  
+<!-- GAME RESULT PAGE -->
+   <section class="game-result--page">
+    <div class="game-result--info">
+    <div class="player">
+      <h3>YOU PICKED</h3>
+      <div class="player-choice">
+         <button><img src="images/icon-paper.svg" alt="paper-icon" class="game-icon game-icon--paper playing-icons paper-icon" align="icon-paper"></button>
+      </div>
+     </div>
+     <div class="result">
+      <div class="result-text"><h1>YOU WIN!</h1>
+      </div>
+      <button class="btn-again">PLAY AGAIN</button>
+    </div>
+    <div class="house-player">
+      <h3>THE HOUSE PICKED</h3>
+      <button><img src="images/icon-scissors.svg" alt="scissors-icon" class="game-icon game-icon--scissors playing-icons scissors-icon" align="icon-scissors"></button>
+      <div class="house-choice">
+      </div>
+     </div>
+   </div>
+   </section>
+    <div class="rules">
+    <button class="btn btn-rules">RULES</button>
+  </div>
+<!-- MODAL RULES -->
+   <section class="modal-desktop">
+    <div class="modal-box">
+    <div class="modal-heading">
+    <h1 class="modal-heading--rules">RULES</h1>
+    <img src="images/icon-close.svg" alt="icon-close" class="icon-close">
+  </div>
+  <div class="modal-img">
+    <img src="images/image-rules.svg" alt="image-rules">
+  </div>
+</div>
+  </section>
+  <section class="modal-mobile">
+    
+  </section>
+       
+     
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">bc464</a>.
+  </div>
+</div>
+</body>
+</html>

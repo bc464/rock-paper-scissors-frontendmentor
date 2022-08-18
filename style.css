@@ -1,0 +1,244 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	background-color: #000;
+}
+.container {
+	margin: 30px 0;
+	background-image: radial-gradient(circle,hsl(237, 49%, 15%) ,hsl(214, 47%, 23%));
+	
+}
+/****GAME HEADING*****/
+.game-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50%;
+
+	margin: 50px auto 50px;
+	border: 3px solid hsl(217, 16%, 45%);
+	border-radius: 10px;
+	padding: 10px;
+}
+.game-score {
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+	justify-content: center;
+	padding: 15px 30px;
+	border-radius: 10px;
+	background-color: #eee;
+	color: hsl(229, 64%, 46%);
+}
+.game-score--heading {
+	
+	opacity: 0.5;
+}
+.game-score--total {
+	
+	font-size: 55px;
+}
+/***MAIN GAME AREA****/
+/***GAME PLAY PAGE*/
+.game-play-page {
+	width: 30%;
+	height: 300px;
+	margin: 0 auto;
+	background-image: url("images/bg-triangle.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 200px;
+	
+	display: block;
+	
+}
+
+/***game-icons***/
+
+.game-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	/*margin: 0 auto;*/
+	column-gap: 40px;
+	
+	
+
+}
+.game-icon--box {
+	width: 40%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*flex-wrap: wrap;*/
+
+}
+
+/*.game-icon-box--paper {
+	display: flex;
+	justify-content: flex-end;
+	width: 30%;
+}*/
+
+.game-icon {
+
+	border-radius: 50%;
+	padding: 30px;
+	/*border: 10px solid white;
+	cursor: pointer;
+	/*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);*/
+	cursor: pointer;
+
+}
+.game-icon--rock {
+	padding: 33px;
+	border: 10px solid hsl(349, 71%, 52%);
+	
+	
+
+}
+.game-icon--paper {
+	border: 10px solid hsl(230, 89%, 62%);
+	
+	
+}
+.game-icon--scissors {
+	border: 10px solid hsl(39, 89%, 49%);
+	
+}
+/***btn-rules****/
+.rules {
+	width: 70%;
+	margin: 50px auto 0;
+}
+.btn-rules {
+
+	padding: 5px 15px;
+	border-radius: 10px;
+	color: #fff;
+	border: 1px solid #fff;
+	font-size: 10px;
+	background-color: inherit;
+	cursor: pointer;
+
+}
+.btn-rules:hover {
+	border: outset;
+	border: none;
+	box-shadow: 2px 2px 3px  rgba(0, 0, 0, 0.7);
+}
+.btn-rules:active {
+	box-shadow: inset 5px 5px 10px -3px rgba(255, 255, 255, 0.7);
+}
+
+.rules {
+	text-align: right;
+}
+/***GAME RESULT PAGE***/
+.game-result--page {
+	width: 45%;
+	margin: 0 auto;
+	text-align: center;
+	display: none;
+}
+.game-result--info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+h3 {
+	color: #fff;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.btn-again {
+
+	color: red;
+	background-color: #fff;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+/***MODAL DESKTOP****/
+.modal-desktop {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	padding-top: 200px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	
+	/*position: absolute;
+	top: 200px;
+	left: 37%;
+	background-color: rgba(0, 0, 0, 0.5);*/
+	
+}
+.modal-box {
+	width: 40%;
+	margin: 0 auto;
+	/*margin-left: auto;*/
+	padding: 20px 30px;
+	border-radius: 10px;
+	background-color: #fff;
+	/*display: block;*/
+}
+.modal-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+.modal-img {
+	display: flex;
+	justify-content: center;
+
+}
+.modal-heading--rules {
+	color: hsl(229, 25%, 31%);
+}
+.icon-close {
+	cursor: pointer;
+}
+
+/***MODAL MOBILE *****/
+
+/*****************/
+.attribution { 
+	font-size: 11px; 	
+	text-align: center; 
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+/****MEDIA QUERIES*****/
+@media only screen and (max-width: 375px) {
+	.game-heading,
+	.game-play-page,
+	.rules {
+		width: 90%;
+	}
+}
