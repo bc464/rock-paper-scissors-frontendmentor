@@ -9,21 +9,25 @@ body {
 	background-color: #000;
 }
 .container {
-	margin: 30px 0;
+	margin: 40px 0 20px;
 	background-image: radial-gradient(circle,hsl(237, 49%, 15%) ,hsl(214, 47%, 23%));
-	
+	padding-top: 40px;
 }
 /****GAME HEADING*****/
 .game-heading {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 50%;
+	
+	width: 45%;
 
-	margin: 50px auto 50px;
+	margin: 0px auto 30px;
 	border: 3px solid hsl(217, 16%, 45%);
 	border-radius: 10px;
 	padding: 10px;
+}
+.game-heading--container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
 }
 .game-score {
 	display: flex;
@@ -47,7 +51,7 @@ body {
 /***MAIN GAME AREA****/
 /***GAME PLAY PAGE*/
 .game-play--page {
-	width: 30%;
+	width: 45%;
 	height: 300px;
 	margin: 0 auto;
 	background-image: url("images/bg-triangle.svg");
@@ -73,7 +77,7 @@ body {
 
 }
 .game-icon--box {
-	width: 40%;
+	width: 30%;
 	
 	display: flex;
 	justify-content: center;
@@ -100,18 +104,18 @@ body {
 }
 .game-icon--rock {
 	padding: 33px;
-	border: 10px solid hsl(349, 71%, 52%);
+	border: 20px solid hsl(349, 71%, 52%);
 	
 	
 
 }
 .game-icon--paper {
-	border: 10px solid hsl(230, 89%, 62%);
+	border: 20px solid hsl(230, 89%, 62%);
 	
 	
 }
 .game-icon--scissors {
-	border: 10px solid hsl(39, 89%, 49%);
+	border: 20px solid hsl(39, 89%, 49%);
 	
 }
 /***btn-rules****/
@@ -185,12 +189,13 @@ h3 {
 }
 
 /***MODAL DESKTOP****/
-.modal-desktop {
+.modal {
 	display: none;
 	position: fixed;
 	z-index: 100;
-	padding-top: 200px;
 	top: 0;
+	padding-top:  200px;
+
 	width: 100%;
 	height: 100%;
 	overflow: auto;
@@ -203,24 +208,41 @@ h3 {
 	
 }
 .modal-box {
-	width: 40%;
+	width: 25%;
 	margin: 0 auto;
 	/*margin-left: auto;*/
-	padding: 20px 30px;
+	padding: 20px 30px 30px;
 	border-radius: 10px;
 	background-color: #fff;
 	/*display: block;*/
 }
+.modal-flex {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	gap:  40px;
+	flex-wrap: wrap;
+}
 .modal-heading {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 40px;
+	
+	/*margin-bottom: 40px;*/
+	
+}
+.modal-img--close {
+	display: flex;
+	justify-content: baseline;
+	
+	
 }
 .modal-img {
 	display: flex;
 	justify-content: center;
-
+	
+}
+.img-rules {
+	width: 90%;
 }
 .modal-heading--rules {
 	color: hsl(229, 25%, 31%);
@@ -241,14 +263,66 @@ h3 {
 }
 /****MEDIA QUERIES*****/
 @media only screen and (max-width: 375px) {
+	.container {
+		margin: 0;
+	}
 	.game-heading,
-	.game-play--page,
-	.game-result--page,
+	
+	
 	.rules {
 		width: 90%;
 	}
+	.game-play--page,
+	.game-result--page {
+		width: 100%;
+	}
+	.game-icon {
+		padding: 20px;
+	}
+	.game-icon--rock {
+		padding: 23px;
+	}
+	.rules {
+		text-align: center;
+	}
+	.game-result--info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.result {
+		display: flex;
+		flex-direction: column;
+		
+		align-content: center;
+		order: 3;
+		margin: 30px 0;
+	}
+	.modal {
+		padding-top: 0;
+	}
 	.modal-box {
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 	}
+	.modal-flex {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		/*flex-wrap: nowrap;*/
+	}
+	.modal-heading {
+		display: flex;
+		justify-content: center;
+		padding-top: 100px;
+		
+		
+	}
+	.modal-img--close {
+		display: flex;
+		justify-content: center;
+		order: 3;
+		
+	}
+	
 }

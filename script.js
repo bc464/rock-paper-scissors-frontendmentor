@@ -155,17 +155,17 @@ playAgainBtn.addEventListener("click", function() {
 
 // MODAL FUNCTIONALITY
 const rulesBtn = document.querySelector(".btn-rules");
-const modalDesktop = document.querySelector(".modal-desktop");
+const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".icon-close");
 
 rulesBtn.addEventListener("click", function() {
-	modalDesktop.style.display = "block";
+	modal.style.display = "block";
 })
 closeModal.addEventListener("click", function() {
-	modalDesktop.style.display = "none";
+	modal.style.display = "none";
 })
 window.onclick = function(event) {
-	if(event.target == modalDesktop) {
-		modalDesktop.style.display = "none";
+	if(event.target == modal) {
+		modal.style.display = "none";
 	}
 }
