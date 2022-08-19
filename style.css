@@ -15,9 +15,7 @@ body {
 }
 /****GAME HEADING*****/
 .game-heading {
-	
 	width: 45%;
-
 	margin: 0px auto 30px;
 	border: 3px solid hsl(217, 16%, 45%);
 	border-radius: 10px;
@@ -27,12 +25,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	
 }
 .game-score {
 	display: flex;
 	flex-direction: column;
-	
 	align-items: center;
 	justify-content: center;
 	padding: 15px 30px;
@@ -41,14 +37,14 @@ body {
 	color: hsl(229, 64%, 46%);
 }
 .game-score--heading {
-	
 	opacity: 0.5;
 }
 .game-score--total {
-	
 	font-size: 55px;
 }
+
 /***MAIN GAME AREA****/
+
 /***GAME PLAY PAGE*/
 .game-play--page {
 	width: 45%;
@@ -58,9 +54,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 200px;
-	
 	display: block;
-	
 }
 
 /***game-icons***/
@@ -70,61 +64,36 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	/*margin: 0 auto;*/
 	column-gap: 40px;
-	
-	
-
 }
 .game-icon--box {
 	width: 30%;
-	
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/*flex-wrap: wrap;*/
-
 }
 
-/*.game-icon-box--paper {
-	display: flex;
-	justify-content: flex-end;
-	width: 30%;
-}*/
-
 .game-icon {
-
 	border-radius: 50%;
 	padding: 30px;
-	/*border: 10px solid white;
 	cursor: pointer;
-	/*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);*/
-	cursor: pointer;
-
 }
 .game-icon--rock {
 	padding: 33px;
 	border: 20px solid hsl(349, 71%, 52%);
-	
-	
-
 }
 .game-icon--paper {
 	border: 20px solid hsl(230, 89%, 62%);
-	
-	
 }
 .game-icon--scissors {
 	border: 20px solid hsl(39, 89%, 49%);
-	
 }
-/***btn-rules****/
+/***RULES BUTTON****/
 .rules {
 	width: 70%;
 	margin: 50px auto 0;
 }
 .btn-rules {
-
 	padding: 5px 15px;
 	border-radius: 10px;
 	color: #fff;
@@ -132,25 +101,16 @@ body {
 	font-size: 10px;
 	background-color: inherit;
 	cursor: pointer;
-
 }
-/*.btn-rules:hover {
-	
-	border: none;
-	box-shadow: outset 2px 2px 3px  rgba(0, 0, 0, 0.7);
-}
-.btn-rules:active {
-	box-shadow: inset 5px 5px 10px -3px rgba(0,0,0, 0.7);
-}*/
-
 .rules {
 	text-align: right;
 }
+
 /***GAME RESULT PAGE***/
 .game-result--page {
 	width: 45%;
 	height: 300px;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 	text-align: center;
 	display: none;
 }
@@ -158,6 +118,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap:  30px;
 }
 h3 {
 	color: #fff;
@@ -173,7 +134,7 @@ h3 {
 	text-transform: uppercase;
 }
 .btn-again {
-
+	display: none;
 	color: red;
 	background-color: #fff;
 	padding: 10px 30px;
@@ -200,21 +161,13 @@ h3 {
 	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.4);
-	
-	/*position: absolute;
-	top: 200px;
-	left: 37%;
-	background-color: rgba(0, 0, 0, 0.5);*/
-	
 }
 .modal-box {
 	width: 25%;
 	margin: 0 auto;
-	/*margin-left: auto;*/
 	padding: 20px 30px 30px;
 	border-radius: 10px;
 	background-color: #fff;
-	/*display: block;*/
 }
 .modal-flex {
 	display: flex;
@@ -226,20 +179,14 @@ h3 {
 .modal-heading {
 	display: flex;
 	align-items: center;
-	
-	/*margin-bottom: 40px;*/
-	
 }
 .modal-img--close {
 	display: flex;
 	justify-content: baseline;
-	
-	
 }
 .modal-img {
 	display: flex;
 	justify-content: center;
-	
 }
 .img-rules {
 	width: 90%;
@@ -265,16 +212,19 @@ h3 {
 @media only screen and (max-width: 375px) {
 	.container {
 		margin: 0;
+		height: 100vh;
 	}
-	.game-heading,
-	
-	
-	.rules {
+	.game-heading {
 		width: 90%;
 	}
-	.game-play--page,
-	.game-result--page {
+	.game-play--page {
 		width: 100%;
+
+	}
+	.game-result--page {
+		width: 95%;
+		margin-left: 15px;
+		margin-bottom: 50px;
 	}
 	.game-icon {
 		padding: 20px;
@@ -284,6 +234,7 @@ h3 {
 	}
 	.rules {
 		text-align: center;
+		padding-top: 50px;
 	}
 	.game-result--info {
 		display: flex;
@@ -293,10 +244,14 @@ h3 {
 	.result {
 		display: flex;
 		flex-direction: column;
-		
 		align-content: center;
 		order: 3;
-		margin: 30px 0;
+	}
+	.player,
+	.house-player {
+		display: flex;
+		flex-direction: column-reverse;
+		gap:  30px;
 	}
 	.modal {
 		padding-top: 0;
@@ -309,20 +264,19 @@ h3 {
 		display: flex;
 		flex-direction: column;
 		gap: 100px;
-		/*flex-wrap: nowrap;*/
 	}
 	.modal-heading {
 		display: flex;
 		justify-content: center;
 		padding-top: 100px;
-		
-		
 	}
 	.modal-img--close {
 		display: flex;
 		justify-content: center;
 		order: 3;
-		
+	}
+	.attribution {
+		margin-top: 100px;
 	}
 	
 }

@@ -27,38 +27,43 @@ function showResultPage() {
 	resultPage.style.display = "block";
 }
 
-function createPlayerImg() {
-	let playerImg = document.createElement("img");
-}
-
 // PLAYROUND FUNCTION
 function playRound(playerSelection, houseSelection) {
-	// playerChoice.textContent = " ";
-	// computerChoose.textContent = " ";
-	const random = Math.floor(Math.random()* choices.length );	
+	
+	const random = Math.floor(Math.random()* choices.length );
+	playerBox = document.createElement("p");	
+	
 	playerImg = document.createElement("img");
 	playerSelection = this.id;
 // ADDING IMAGE TO ID
 	if (playerSelection === "rock") {
 			playerImg.src = rockImg;
-				playerImg.style.width = "100%"; 
-				playerChoice.append(playerImg)
+				playerBox.style.backgroundColor ="white";
+				playerBox.classList = "game-icon game-icon--rock";
+				playerChoice.append(playerBox);
+				
+				playerBox.append(playerImg);
 				showResultPage();
 			} if (playerSelection === "paper") {
 				
 				playerImg.src = paperImg;
-				playerImg.style.width = "100%"; 
-				playerChoice.append(playerImg)
+				playerBox.style.backgroundColor ="white";
+				playerBox.classList = "game-icon game-icon--paper";
+				playerChoice.append(playerBox);
+				playerBox.append(playerImg);
 				showResultPage();
 			} if (playerSelection === "scissors") {
 				
 				playerImg.src = scissorsImg;
-				playerImg.style.width = "100%"; 
-				playerChoice.append(playerImg)
+				playerBox.style.backgroundColor ="white";
+				playerBox.classList = "game-icon game-icon--scissors";
+				playerChoice.append(playerBox);
+				playerBox.append(playerImg);
 				showResultPage();
 			} 
  //COMPUTER CHOICE AND IMAGE TO CHOICE 
-			
+ 
+setTimeout(() => {		
 	let houseChoice = choices[random];
 	houseSelection = houseChoice;
 	houseBox = document.createElement("p");
@@ -67,49 +72,52 @@ function playRound(playerSelection, houseSelection) {
 			if (houseSelection === "rock") {
 				
 				houseImg.src = rockImg;
-				// houseBox.style.width = "100%";
+
 				houseBox.style.backgroundColor ="white";
 				houseBox.classList = "game-icon game-icon--rock";
-				// houseBox.classList = "game-icon--rock";
+				
 				houseChoose.append(houseBox);
 				houseBox.append(houseImg);
 			} if (houseSelection === "paper") {
 				
 				houseImg.src = paperImg;
-				// houseBox.style.width = "100%";
 				houseBox.style.backgroundColor ="white";
 				houseBox.classList = "game-icon game-icon--paper";
-				// houseBox.classList = "game-icon--paper";
+
+				
 				houseChoose.append(houseBox);
 				houseBox.append(houseImg)
 				
 			} if (houseSelection === "scissors") {
 				
 				houseImg.src = scissorsImg;
-				// houseBox.style.width = "100%";
 				houseBox.style.backgroundColor ="white";
 				houseBox.classList = "game-icon game-icon--scissors";
-				// houseBox.classList = "game-icon--scissors";
+
+				
 				houseChoose.append(houseBox);
 				houseBox.append(houseImg);
 				
-			} 
+			} }, 300);
 // MAIN LOGIC 
-		
+
+setTimeout(()=> {	
 	if (playerSelection === "rock" && houseSelection === "rock" ||playerSelection === "paper" && houseSelection === "paper"|| playerSelection === "scissors" && houseSelection === "scissors") {
 				gameResult.textContent = "It's a tie";
-				
+				playAgainBtn.style.display = "block";
 				
 		} else if (playerSelection === "rock" && houseSelection === "paper") {
 				
 				playerScore --;
 				gameResult.textContent = "You Lose";
+				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore; 
 				
 		} else if (playerSelection === "rock" && houseSelection === "scissors") {
 				playerScore ++;
 				
 				gameResult.textContent = "You Win";
+				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore;
 				
 			
@@ -117,27 +125,32 @@ function playRound(playerSelection, houseSelection) {
 				playerScore ++;
 				
 				gameResult.textContent = "You Win";
+				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore;
 				
 
 		} else if (playerSelection === "paper" && houseSelection === "scissors") {
 				playerScore --;
-				gameResult.textContent = "You Lose" 
+				gameResult.textContent = "You Lose" ;
+				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore;
 			
 	   } else if (playerSelection === "scissors" && houseSelection === "rock") {
 	   			playerScore --;
 				gameResult.textContent = "You Lose";
+				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore; 
 				
 		} else {
 				playerScore ++;
 				
 				gameResult.textContent = "You Win";
+				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore;
 				
 			}
-		};
+		}, 500);
+}
 
 
 
@@ -145,12 +158,11 @@ function playRound(playerSelection, houseSelection) {
 playAgainBtn.addEventListener("click", function() {
 	playerChoice.textContent = "";
 	houseChoose.textContent ="";
+	gameResult.textContent = "";
+	playAgainBtn.style.display = "none";
 	resultPage.style.display = "none";
 	gamePage.style.display = "block";
 })
-
-
-
 
 
 // MODAL FUNCTIONALITY

@@ -16,49 +16,44 @@
   <div class="container">
   <section class="game-heading">
     <div class="game-heading--container">
-    <img src="images/logo.svg" align="logo" class="logo">
-    <div class="game-score">
-      <h4 class="game-score--heading">Score</h4>
-      <h2 class="playerScore game-score--total">0</h2>
+      <img src="images/logo.svg" align="logo" class="logo">
+      <div class="game-score">
+        <h4 class="game-score--heading">Score</h4>
+        <h2 class="playerScore game-score--total">0</h2>
+      </div>
     </div>
-  </div>
   </section>
 
 <!-- MAIN GAME AREA -->
 <!-- GAME ICONS FRONT PAGE -->
   <section class="game-play--page">
-    
     <div class="game-icons">
       <div id="paper" class="game-icon--box">
-        
-      <button class="game-icon game-icon--paper"><img src="images/icon-paper.svg" alt="paper-icon" class="playing-icons paper-icon" align="icon-paper"></button>
-    
+        <button class="game-icon game-icon--paper"><img src="images/icon-paper.svg" alt="paper-icon" class="playing-icons paper-icon" ></button>
+      </div>
+      <div id="scissors" class="game-icon--box">
+        <button class="game-icon game-icon--scissors"><img src="images/icon-scissors.svg" alt="scissors-icon" class="playing-icons scissors-icon" ></button>
+      </div>
+      <div id="rock" class="game-icon--box">
+        <button class="game-icon game-icon--rock"><img src="images/icon-rock.svg" alt="rock-icon" class="playing-icons rock-icon" ></button>
+      </div>
     </div>
-   
-   <div id="scissors" class="game-icon--box">
-      <button class="game-icon game-icon--scissors"><img src="images/icon-scissors.svg" alt="scissors-icon" class="playing-icons scissors-icon" align="icon-scissors"></button>
-    </div>
-     <div id="rock" class="game-icon--box">
-     <button class="game-icon game-icon--rock"><img src="images/icon-rock.svg" alt="rock-icon" class="playing-icons rock-icon" align="icon-rock"></button>
-   </div>
-    </div>
-    </section> 
-   
+  </section> 
   
 <!-- GAME RESULT PAGE -->
    <section class="game-result--page">
     <div class="game-result--info">
       <div class="player">
         <h3>YOU PICKED</h3>
-        <div class="player-choice">
           <p class="choice-box"><span class="player-choice"></span></p>
-        </div>
-       </div>
-       <div class="result">
+      </div>
+      <div class="result">
         <div class="result-text">
         </div>
+        <div class="play-again--btn">
         <button class="btn-again">PLAY AGAIN</button>
       </div>
+    </div>
       <div class="house-player">
         <h3>THE HOUSE PICKED</h3>
         <p class="choice-box">
@@ -67,34 +62,32 @@
       </div>
      </div>
    </section>
+<!-- RULES BUTTON -->
     <div class="rules">
-    <button class="btn btn-rules">RULES</button>
-  </div>
+      <button class="btn btn-rules">RULES</button>
+    </div>
 <!-- MODAL RULES -->
    <section class="modal">
     <div class="modal-box">
       <div class="modal-flex">
-      <div class="modal-heading">
-        
-        <h1 class="modal-heading--rules">RULES</h1>
-      </div>
+        <div class="modal-heading">
+          <h1 class="modal-heading--rules">RULES</h1>
+        </div>
         <div class="modal-img--close">
           <img src="images/icon-close.svg" alt="icon-close" class="icon-close">
         </div>
-      
-      <div class="modal-img">
-        <img src="images/image-rules.svg" alt="image-rules" class="img-rules">
+        <div class="modal-img">
+          <img src="images/image-rules.svg" alt="image-rules" class="img-rules">
+        </div>
       </div>
     </div>
-    </div>
   </section>
-  
-       
+<!-- ATTRIBUTION -->
      
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">bc464</a>.
-  </div>
-</div>
-</body>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+       Coded by <a href="#">bc464</a>.
+      </div>
+    </div>
+  </body>
 </html>
