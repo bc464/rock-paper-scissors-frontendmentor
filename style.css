@@ -135,14 +135,17 @@ h3 {
 }
 .btn-again {
 	display: none;
-	color: red;
+	font-weight: 700;
 	background-color: #fff;
-	padding: 10px 30px;
+	padding: 10px 35px;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	border-radius: 10px;
 	border: none;
 	cursor: pointer;
+}
+.btn-again:hover {
+	color: red;
 }
 .choice-box {
 	width: 150px;
@@ -209,10 +212,27 @@ h3 {
 	color: hsl(228, 45%, 44%); 
 }
 /****MEDIA QUERIES*****/
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width:  900px) {
+	.game-heading {
+		width: 90%;
+	}
+	.game-play--page {
+		width: 80%;
+
+	}
+	.game-result--page {
+		width: 80%;
+		/*margin-left: 15px;*/
+		margin-bottom: 50px;
+	}
+	.modal-box {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 601px) {
 	.container {
 		margin: 0;
-		height: 100vh;
 	}
 	.game-heading {
 		width: 90%;

@@ -13,11 +13,13 @@ const gamePage = document.querySelector(".game-play--page");
 const resultPage = document.querySelector(".game-result--page");
 
 // HOUSE CHOICE FUNCTION
+
 function getHouseChoice(){
 	const random = Math.floor(Math.random()*choice.length);
 	let houseChoice = choices[random];
 }
 // CLICKING ON PAPER,ROCK,SCISSORS
+
 gameBoxes.forEach((gameBox) => {
 	gameBox.addEventListener("click", playRound)
 });
@@ -28,6 +30,7 @@ function showResultPage() {
 }
 
 // PLAYROUND FUNCTION
+
 function playRound(playerSelection, houseSelection) {
 	
 	const random = Math.floor(Math.random()* choices.length );
@@ -61,6 +64,7 @@ function playRound(playerSelection, houseSelection) {
 				playerBox.append(playerImg);
 				showResultPage();
 			} 
+
  //COMPUTER CHOICE AND IMAGE TO CHOICE 
  
 setTimeout(() => {		
@@ -98,7 +102,8 @@ setTimeout(() => {
 				houseChoose.append(houseBox);
 				houseBox.append(houseImg);
 				
-			} }, 300);
+			} }, 400);
+
 // MAIN LOGIC 
 
 setTimeout(()=> {	
@@ -112,6 +117,7 @@ setTimeout(()=> {
 				gameResult.textContent = "You Lose";
 				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore; 
+				
 				
 		} else if (playerSelection === "rock" && houseSelection === "scissors") {
 				playerScore ++;
@@ -128,18 +134,21 @@ setTimeout(()=> {
 				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore;
 				
+				
 
 		} else if (playerSelection === "paper" && houseSelection === "scissors") {
 				playerScore --;
 				gameResult.textContent = "You Lose" ;
 				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore;
+				
 			
 	   } else if (playerSelection === "scissors" && houseSelection === "rock") {
 	   			playerScore --;
 				gameResult.textContent = "You Lose";
 				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore; 
+				
 				
 		} else {
 				playerScore ++;
@@ -148,13 +157,13 @@ setTimeout(()=> {
 				playAgainBtn.style.display = "block";
 				playerScoreContent.textContent = playerScore;
 				
+				
 			}
-		}, 500);
+		}, 600);
 }
 
-
-
 // PLAY AGAIN BUTTON
+
 playAgainBtn.addEventListener("click", function() {
 	playerChoice.textContent = "";
 	houseChoose.textContent ="";
@@ -166,6 +175,7 @@ playAgainBtn.addEventListener("click", function() {
 
 
 // MODAL FUNCTIONALITY
+
 const rulesBtn = document.querySelector(".btn-rules");
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".icon-close");
